@@ -13,20 +13,20 @@ RUN set -x && \
 
 #Download nginx & php
     mkdir -p /home/nginx-php && cd $_ && \
-#    curl -Lk http://pecl.php.net/get/mongodb-1.1.8.tgz | gunzip | tar x -C /home/nginx-php && \
-#    curl -Lk http://pecl.php.net/get/redis-3.1.4.tgz | gunzip | tar x -C /home/nginx-php && \
-#    curl -Lk http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz | gunzip | tar x -C /home/nginx-php && \
-#    curl -Lk http://php.net/distributions/php-$PHP_VERSION.tar.gz | gunzip | tar x -C /home/nginx-php && \    
-#    curl -Lk http://pecl.php.net/get/zookeeper-0.4.0.tgz | gunzip | tar x -C /home/nginx-php && \
-#    curl -Lk http://mirrors.cnnic.cn/apache/zookeeper/zookeeper-3.5.0-alpha/zookeeper-3.5.0-alpha.tar.gz | gunzip | tar x -C /home/nginx-php && \
+    curl -Lk http://pecl.php.net/get/mongodb-1.1.8.tgz | gunzip | tar x -C /home/nginx-php && \
+    curl -Lk http://pecl.php.net/get/redis-3.1.4.tgz | gunzip | tar x -C /home/nginx-php && \
+    curl -Lk http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz | gunzip | tar x -C /home/nginx-php && \
+    curl -Lk http://php.net/distributions/php-$PHP_VERSION.tar.gz | gunzip | tar x -C /home/nginx-php && \    
+    curl -Lk http://pecl.php.net/get/zookeeper-0.4.0.tgz | gunzip | tar x -C /home/nginx-php && \
+    curl -Lk http://mirrors.cnnic.cn/apache/zookeeper/zookeeper-3.5.0-alpha/zookeeper-3.5.0-alpha.tar.gz | gunzip | tar x -C /home/nginx-php && \
 
-    curl -Lk http://192.168.1.121/software/mongodb-1.1.8.tgz | gunzip | tar x -C /home/nginx-php && \
-    curl -Lk http://192.168.1.121/software/zookeeper-0.4.0.tgz | gunzip | tar x -C /home/nginx-php && \
-    curl -Lk http://192.168.1.121/software/redis-3.1.4.tgz | gunzip | tar x -C /home/nginx-php && \
-    curl -Lk http://192.168.1.121/software/nginx-$NGINX_VERSION.tar.gz | gunzip | tar x -C /home/nginx-php && \
-    curl -Lk http://192.168.1.121/software/php-$PHP_VERSION.tar.gz | gunzip | tar x -C /home/nginx-php && \
-    curl -Lk http://192.168.1.121/software/zookeeper-3.5.0-alpha.tar.gz | gunzip | tar x -C /home/nginx-php && \
-    ls -a /home/nginx-php && \
+#    curl -Lk http://192.168.1.121/software/mongodb-1.1.8.tgz | gunzip | tar x -C /home/nginx-php && \
+#    curl -Lk http://192.168.1.121/software/zookeeper-0.4.0.tgz | gunzip | tar x -C /home/nginx-php && \
+#    curl -Lk http://192.168.1.121/software/redis-3.1.4.tgz | gunzip | tar x -C /home/nginx-php && \
+#    curl -Lk http://192.168.1.121/software/nginx-$NGINX_VERSION.tar.gz | gunzip | tar x -C /home/nginx-php && \
+#    curl -Lk http://192.168.1.121/software/php-$PHP_VERSION.tar.gz | gunzip | tar x -C /home/nginx-php && \
+#    curl -Lk http://192.168.1.121/software/zookeeper-3.5.0-alpha.tar.gz | gunzip | tar x -C /home/nginx-php && \
+#    ls -a /home/nginx-php && \
 
 #Install make tool
     yum install -y gcc \
